@@ -30,7 +30,7 @@ body {
 	height: 225px;
 	padding: 0;
 	border: 0;
-
+	opacity: .75;
 }
 
 #greenButton {
@@ -72,4 +72,8 @@ body {
 	border-radius: 50px;
 	bottom: 736px;
 	left: 178px;
+}
+
+#buttonDiv {
+	border: 1px solid black;
 }
