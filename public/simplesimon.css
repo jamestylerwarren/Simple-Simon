@@ -1,6 +1,5 @@
-body {
-	background-color: white;
-}
+
+
 
 #outterCircle {
 	width: 500px;
@@ -33,15 +32,13 @@ body {
 	opacity: .75;
 }
 
+
+
 #greenButton {
 	position: relative;
 	background-color: green;
 	right: 12.5px;
 	bottom: 12.5px;
-}
-
-button#greenButton:hover {
-	opacity: 1;
 }
 
 #redButton {
@@ -51,19 +48,11 @@ button#greenButton:hover {
 	bottom: 240.5px;
 }
 
-button#redButton:hover {
-	opacity: 1;
-}
-
 #yellowButton {
 	position: relative;
 	background-color: yellow;
 	bottom: 213.5px;
 	right: 12.5px;
-}
-
-button#yellowButton:hover {
-	opacity: 1;
 }
 
 #blueButton {
@@ -72,10 +61,6 @@ button#yellowButton:hover {
  	bottom: 442.5px;
  	left: 240.5px;
 
-}
-
-button#blueButton:hover {
-	opacity: 1;
 }
 
 #innerInnerCircle {

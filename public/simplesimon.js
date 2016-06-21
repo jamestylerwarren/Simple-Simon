@@ -4,7 +4,6 @@
 
     var solution = [];
     var index = 0;
-    var level = 0;
     var buttons = $('.buttons');
 
     //------- Generate a random number between 1 - 4 --------------------// 
@@ -16,29 +15,45 @@
 
     //------- Upon start generate random number and push to solution------//
     $('#start').click(function() {
-            solution = [];
             solution.push(randomNumber(4));
             console.log(solution);
-        });
+    });
 
 
     //------- Listeners for colored buttons ------------------------------//
-    var listenerButtons = buttons
-    for (var i = 0; i < listenerButtons.length; i++) {
-        listenerButtons[i].addEventListener('click', function(){
-            if (solution[index] == $(this).data('number')) {
+    
+
+
+    buttons.click(function() {
+        if (solution[index] == $(this).data('number')) {
                 index++;
-                solution.push(randomNumber(4));
-                console.log(solution);
             } else {
                 solution = [];
                 index = 0;
                 console.log('you failed');
             }
 
+        if (index == solution.length) {
+                solution.push(randomNumber(4));
+                console.log(solution);
+                index = 0;
+                console.log('correct');
+            }
+    });
+    buttons.each(function(){
+        $(this).mousedown(function(){
+            $(this).animate({
+                'opacity': '1'
+            }, 75).animate({
+                'opacity': '.75'
+            }, 75)
+        })
+    });
 
-        });
-    }
+
+    var listenerButtons = buttons
+    
+    
 
 
 
