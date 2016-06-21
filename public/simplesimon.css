@@ -40,11 +40,19 @@ body {
 	bottom: 12.5px;
 }
 
+button#greenButton:hover {
+	opacity: 1;
+}
+
 #redButton {
 	position: relative;
 	background-color: red;
 	left: 240.5px;
 	bottom: 240.5px;
+}
+
+button#redButton:hover {
+	opacity: 1;
 }
 
 #yellowButton {
@@ -54,12 +62,20 @@ body {
 	right: 12.5px;
 }
 
+button#yellowButton:hover {
+	opacity: 1;
+}
+
 #blueButton {
  	position: relative;
  	background-color: blue;
  	bottom: 442.5px;
  	left: 240.5px;
 
+}
+
+button#blueButton:hover {
+	opacity: 1;
 }
 
 #innerInnerCircle {
@@ -74,6 +90,3 @@ body {
 	left: 178px;
 }
 
-#buttonDiv {
-	border: 1px solid black;
-}
