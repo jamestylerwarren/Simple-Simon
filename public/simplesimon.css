@@ -1,3 +1,75 @@
 body {
 	background-color: white;
 }
+
+#outterCircle {
+	width: 500px;
+	height: 500px;
+	background: black;
+	-moz-border-radius: 250px;
+	-webkit-border-radius: 250px;
+	border-radius: 250px;
+	position: relative;
+}
+
+#innerCircle {
+	width: 450px;
+	height: 450px;
+	background: black;
+	-moz-border-radius: 225px;
+	-webkit-border-radius: 225px;
+	border-radius: 225px;
+	position: relative;
+	left: 25px;
+	top: 25px;
+	overflow: hidden;
+}
+
+.buttons {
+	width: 225px;
+	height: 225px;
+	padding: 0;
+	border: 0;
+
+}
+
+#greenButton {
+	position: relative;
+	background-color: green;
+	right: 12.5px;
+	bottom: 12.5px;
+}
+
+#redButton {
+	position: relative;
+	background-color: red;
+	left: 240.5px;
+	bottom: 240.5px;
+}
+
+#yellowButton {
+	position: relative;
+	background-color: yellow;
+	bottom: 213.5px;
+	right: 12.5px;
+}
+
+#blueButton {
+ 	position: relative;
+ 	background-color: blue;
+ 	bottom: 442.5px;
+ 	left: 240.5px;
+
+}
+
+#innerInnerCircle {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background: black;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	bottom: 736px;
+	left: 178px;
+}

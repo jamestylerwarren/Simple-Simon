@@ -2,16 +2,21 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="/simplesimon.css">
-    <title>Simple Simon</title>
+	<title>Simple Simon</title>
 </head>
 <body>
-    <button class="buttons" type="button" data-value="1" class="blue">1</button>
-    <button class="buttons" type="button" data-value="2" class="red">2</button>
-    <button class="buttons" type="button" data-value="3" class="green">3</button>
-    <button class="buttons" type="button" data-value="4" class="yellow">4</button>
-    <button id="start" class ="start" type="button" class="start">start</button>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<div id='outterCircle'>
+		<div id='innerCircle'>
+			<button class='buttons' id='greenButton' type='button' data-value='1' class='green'></button>
+			<button class='buttons' id='redButton' type='button' data-value='2' class='red'></button>
+			<button class='buttons' id='yellowButton' type='button' data-value='3' class='yellow'></button>
+			<button class='buttons' id='blueButton' type='button' data-value='4' class='blue'></button>
+			<div id='innerInnerCircle'></div>
+		</div>
+	</div>
+	<button id='start' class ='start' type='button' class='start'>start</button>
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="/simplesimon.js"></script>
 </body>
 </html>
