@@ -29,9 +29,7 @@
 			level = solution.length;
 			$('span').text(level);
 			correct = true;
-			$('#gameInfoP').css('visibility', 'hidden');
-			console.log(solution);
-
+			$('#gameInfoP').css('visibility', 'hidden'); //reset para to hidden
 		});
 	} startGame();
 
@@ -46,14 +44,12 @@
 					index = 0;
 					level = 0;
 					correct = false;
-					$('#gameInfoP').css('visibility', 'visible');
-					console.log('fail');
+					$('#gameInfoP').css('visibility', 'visible'); //reveal para
 				}
 
 			if (index == solution.length && correct === true) {
 					solution.push(randomNumber(4));
 					animate();
-					console.log(solution);
 					index = 0;
 					level = solution.length;
 					$('span').text(level);
@@ -68,9 +64,9 @@
 			$(this).mousedown(function(){
 				$(this).animate({
 					'opacity': '1'
-				}, 200).animate({
-					'opacity': '.75'
-				}, 200)
+				}, 300).animate({
+					'opacity': '.50'
+				}, 300)
 			})
 		});
 	} clickLight();
@@ -82,9 +78,9 @@
 			setTimeout(function() {
 				$('[data-number="' + random + '"]').animate({
 				'opacity': '1'
-				}, 300).animate ({
-					'opacity': '.75'
-				}, 300);
+				}, 400).animate ({
+					'opacity': '.50'
+				}, 400);
 			}, 500 * (index + 1));
 		})
 	}

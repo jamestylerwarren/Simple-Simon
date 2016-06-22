@@ -1,27 +1,31 @@
-
+body {
+	background-image: url('americanflag.jpg')
+}
 
 
 #outterCircle {
 	width: 500px;
 	height: 500px;
-	background: black;
+	background: white;
 	-moz-border-radius: 250px;
 	-webkit-border-radius: 250px;
 	border-radius: 250px;
 	position: relative;
+	border: 4px solid #d92420;
 }
 
 #innerCircle {
 	width: 450px;
 	height: 450px;
-	background: black;
+	background: white;
 	-moz-border-radius: 225px;
 	-webkit-border-radius: 225px;
 	border-radius: 225px;
 	position: relative;
-	left: 25px;
-	top: 25px;
+	left: 21px;
+	top: 21px;
 	overflow: hidden;
+	border: 5px solid #d92420;
 }
 
 .buttons {
@@ -29,7 +33,7 @@
 	height: 225px;
 	padding: 0;
 	border: 0;
-	opacity: .75;
+	opacity: .5;
 }
 
 
@@ -39,6 +43,7 @@
 	background-color: green;
 	right: 12.5px;
 	bottom: 12.5px;
+	border: 5px solid #d92420;
 }
 
 #redButton {
@@ -46,6 +51,7 @@
 	background-color: red;
 	left: 240.5px;
 	bottom: 240.5px;
+	border: 5px solid #d92420;
 }
 
 #yellowButton {
@@ -53,6 +59,7 @@
 	background-color: yellow;
 	bottom: 213.5px;
 	right: 12.5px;
+	border: 5px solid #d92420;
 }
 
 #blueButton {
@@ -60,22 +67,25 @@
  	background-color: blue;
  	bottom: 442.5px;
  	left: 240.5px;
+ 	border: 5px solid #d92420;
 
 }
 
-#innerInnerCircle {
-	position: relative;
-	width: 100px;
+.gameInfo {
+	background-color: white;
 	height: 100px;
-	background: black;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-	bottom: 736px;
-	left: 178px;
+	width: 500px;
+	border: 5px solid #d92420;
 }
 
 #gameInfoP {
 	visibility: hidden;
 }
 
+#cnapproved {
+	position: relative;
+	height:150px;
+	width: 150px;
+	bottom: 597px;
+	right: 77px;
+}
