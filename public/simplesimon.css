@@ -75,3 +75,7 @@
 	left: 178px;
 }
 
+#gameInfoP {
+	visibility: hidden;
+}
+

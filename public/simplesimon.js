@@ -15,7 +15,6 @@
 
 	function randomNumber (amount) {
 		random = Math.floor(Math.random() * (amount) + 1);
-		animate();
 		return random;
 	};
 
@@ -26,11 +25,15 @@
 			solution = [];
 			index = 0;
 			solution.push(randomNumber(4));
+			animate();
 			level = solution.length;
 			$('span').text(level);
+			correct = true;
+			$('#gameInfoP').css('visibility', 'hidden');
 			console.log(solution);
+
 		});
-	} startGame ();
+	} startGame();
 
 	//------- Evaluate user play ------------------------------//
 
@@ -43,11 +46,13 @@
 					index = 0;
 					level = 0;
 					correct = false;
+					$('#gameInfoP').css('visibility', 'visible');
 					console.log('fail');
 				}
 
 			if (index == solution.length && correct === true) {
 					solution.push(randomNumber(4));
+					animate();
 					console.log(solution);
 					index = 0;
 					level = solution.length;
@@ -60,12 +65,12 @@
 
 	function clickLight() {
 		buttons.each(function(){
-			$(this).mouseup(function(){
+			$(this).mousedown(function(){
 				$(this).animate({
 					'opacity': '1'
-				}, 75).animate({
+				}, 200).animate({
 					'opacity': '.75'
-				}, 75)
+				}, 200)
 			})
 		});
 	} clickLight();
@@ -74,13 +79,13 @@
 
 	function animate () {
 		solution.forEach(function(random, index) {
-			setTimout(function() {
+			setTimeout(function() {
 				$('[data-number="' + random + '"]').animate({
 				'opacity': '1'
-				}, 500).animate ({
+				}, 300).animate ({
 					'opacity': '.75'
-				}, 500);
-			}, 1000 * index);
+				}, 300);
+			}, 500 * (index + 1));
 		})
 	}
 
