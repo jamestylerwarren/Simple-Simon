@@ -1,5 +1,8 @@
 body {
-	background-image: url('americanflag.jpg')
+	background-image: url('chucknorrisbackground.png');
+	background-repeat: no-repeat;
+	background-size: 100%, 100%;
+	position: relative;
 }
 
 
@@ -63,11 +66,11 @@ body {
 }
 
 #blueButton {
- 	position: relative;
- 	background-color: blue;
- 	bottom: 442.5px;
- 	left: 240.5px;
- 	border: 5px solid #d92420;
+	position: relative;
+	background-color: blue;
+	bottom: 442.5px;
+	left: 240.5px;
+	border: 5px solid #d92420;
 
 }
 
@@ -75,11 +78,16 @@ body {
 	background-color: white;
 	height: 100px;
 	width: 500px;
-	border: 5px solid #d92420;
+	background: transparent;
+	text-align: center;
 }
 
 #gameInfoP {
+	position: relative;
 	visibility: hidden;
+	font-size: 2em;
+	bottom: 18em;
+	left: 29%;
 }
 
 #cnapproved {
@@ -88,4 +96,19 @@ body {
 	width: 150px;
 	bottom: 597px;
 	right: 77px;
+}
+
+#cnPunch {
+	position: relative;
+	bottom: 35em;
+	left: 19%;
+	height: 65%;
+	width: 65%;
+	visibility: hidden;
+}
+
+#start {
+	position: relative;
+	height: 20px;
+	width: 40px;
 }

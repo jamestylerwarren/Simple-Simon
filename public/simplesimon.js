@@ -10,6 +10,28 @@
 	var random;
 
 
+//--------- Audio and button blink upon page load -------------------//
+	function uponLoad() {
+		setTimeout(function () {
+    	var audio = new Audio('/focus.mp3');audio.play();
+    	buttons.each(function(){
+			$(this).animate({
+					'opacity': '1'
+				}, 500).animate({
+					'opacity': '.25'
+				}, 500).animate({
+					'opacity': '1'
+				}, 500).animate({
+					'opacity': '.25'
+				}, 500).animate({
+					'opacity': '1'
+				}, 500).animate({
+					'opacity': '.50'
+				}, 500)
+			});
+		}, 1000);
+		
+	} uponLoad();
 
 	//------- Generate a random number between 1 - 4 --------------------// 
 
@@ -29,7 +51,8 @@
 			level = solution.length;
 			$('span').text(level);
 			correct = true;
-			$('#gameInfoP').css('visibility', 'hidden'); //reset para to hidden
+			$('#gameInfoP').css('visibility', 'hidden');
+			$('#cnPunch').css('visibility', 'hidden');  //reset para to hidden
 		});
 	} startGame();
 
@@ -44,7 +67,8 @@
 					index = 0;
 					level = 0;
 					correct = false;
-					$('#gameInfoP').css('visibility', 'visible'); //reveal para
+					$('#gameInfoP').css('visibility', 'visible');
+					$('#cnPunch').css('visibility', 'visible'); //reveal para
 				}
 
 			if (index == solution.length && correct === true) {
@@ -53,6 +77,7 @@
 					index = 0;
 					level = solution.length;
 					$('span').text(level);
+					var audio = new Audio('/good.mp3');audio.play();
 				}
 		});
 	} playGame();
@@ -64,9 +89,9 @@
 			$(this).mousedown(function(){
 				$(this).animate({
 					'opacity': '1'
-				}, 300).animate({
+				}, 200).animate({
 					'opacity': '.50'
-				}, 300)
+				}, 200) 
 			})
 		});
 	} clickLight();
@@ -78,9 +103,9 @@
 			setTimeout(function() {
 				$('[data-number="' + random + '"]').animate({
 				'opacity': '1'
-				}, 400).animate ({
+				}, 300).animate ({
 					'opacity': '.50'
-				}, 400);
+				}, 300);
 			}, 500 * (index + 1));
 		})
 	}
