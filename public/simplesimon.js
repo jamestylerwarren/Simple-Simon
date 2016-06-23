@@ -29,7 +29,7 @@
 					'opacity': '.50'
 				}, 500)
 			});
-		}, 1000);
+		}, 500);
 		
 	} uponLoad();
 
@@ -68,7 +68,8 @@
 					level = 0;
 					correct = false;
 					$('#gameInfoP').css('visibility', 'visible');
-					$('#cnPunch').css('visibility', 'visible'); //reveal para
+					$('#cnPunch').css('visibility', 'visible'); 
+
 				}
 
 			if (index == solution.length && correct === true) {
@@ -86,7 +87,7 @@
 
 	function clickLight() {
 		buttons.each(function(){
-			$(this).mousedown(function(){
+			$(this).click(function(){
 				$(this).animate({
 					'opacity': '1'
 				}, 200).animate({

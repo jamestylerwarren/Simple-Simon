@@ -80,6 +80,7 @@ body {
 	width: 500px;
 	background: transparent;
 	text-align: center;
+
 }
 
 #gameInfoP {
@@ -87,7 +88,12 @@ body {
 	visibility: hidden;
 	font-size: 2em;
 	bottom: 18em;
-	left: 29%;
+	left: 26%;
+	height: 41px;
+	width: 625px;
+	color:#fff;
+	background-color:transparent;
+	text-shadow:#fff 0 0 10px;
 }
 
 #cnapproved {
@@ -109,6 +115,18 @@ body {
 
 #start {
 	position: relative;
-	height: 20px;
-	width: 40px;
+	border-radius: 5px;
+	font-size: 3em;
+	background-color: #d92420;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+#start:hover {
+	background-color: green;
+    color: black;
+}
+
+#start:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
